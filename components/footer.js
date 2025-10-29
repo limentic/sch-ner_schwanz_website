@@ -79,7 +79,7 @@ class CustomFooter extends HTMLElement {
         </div>
       </div>
       <div class="copyright" data-i18n="footerCopyright">
-        &copy; 2024 Schöner Schwanz | All Rights Reserved (Not Really)
+        &copy; 2025 Schöner Schwanz | All Rights Reserved (Not Really)
       </div>
     `;
 

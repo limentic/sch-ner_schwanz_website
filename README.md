@@ -59,4 +59,4 @@ Le site est automatiquement déployé sur GitHub Pages via GitHub Actions à cha
 
 ## 🤘 Purple Reign in Satan's Name
 
-© 2024 Schöner Schwanz | Tous droits réservés (Pas vraiment)
+© 2025 Schöner Schwanz | Tous droits réservés (Pas vraiment)
