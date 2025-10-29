@@ -33,6 +33,7 @@ class CustomNavbar extends HTMLElement {
         .nav-links {
           display: flex;
           gap: 2rem;
+          align-items: center;
         }
         .nav-link {
           color: white;
@@ -43,6 +44,8 @@ class CustomNavbar extends HTMLElement {
           font-size: 0.9rem;
           position: relative;
           transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
         }
         .nav-link:hover {
           color: #8d34c8;
@@ -69,28 +72,55 @@ class CustomNavbar extends HTMLElement {
           cursor: pointer;
         }
         .lang-switcher {
-          display: flex;
-          gap: 0.5rem;
-          align-items: center;
+          position: relative;
+          display: inline-block;
         }
-        .lang-btn {
-          background: none;
+        .lang-dropdown-btn {
+          background: rgba(141, 52, 200, 0.2);
           border: 1px solid #8d34c8;
           color: white;
-          padding: 0.3rem 0.8rem;
+          padding: 0.5rem 1rem;
           border-radius: 4px;
           cursor: pointer;
-          font-size: 0.85rem;
-          font-weight: bold;
+          font-size: 1.5rem;
           transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
         }
-        .lang-btn:hover {
-          background: #8d34c8;
-          color: black;
+        .lang-dropdown-btn:hover {
+          background: rgba(141, 52, 200, 0.4);
         }
-        .lang-btn.active {
-          background: #8d34c8;
-          color: black;
+        .lang-dropdown-content {
+          display: none;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          margin-top: 0.5rem;
+          background: rgba(0, 0, 0, 0.95);
+          border: 1px solid #8d34c8;
+          border-radius: 4px;
+          min-width: 80px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+          z-index: 1000;
+        }
+        .lang-dropdown-content.show {
+          display: block;
+        }
+        .lang-option {
+          padding: 0.75rem 1rem;
+          cursor: pointer;
+          font-size: 1.3rem;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .lang-option:hover {
+          background: rgba(141, 52, 200, 0.3);
+        }
+        .lang-option.active {
+          background: rgba(141, 52, 200, 0.5);
         }
         @media (max-width: 768px) {
           .nav-links {
@@ -127,8 +157,19 @@ class CustomNavbar extends HTMLElement {
           <a href="#tour" class="nav-link" data-i18n="navTour">Tour</a>
           <a href="#merch" class="nav-link" data-i18n="navMerch">Merch</a>
           <div class="lang-switcher">
-            <button class="lang-btn" data-lang="de">DE</button>
-            <button class="lang-btn" data-lang="fr">FR</button>
+            <button class="lang-dropdown-btn">
+              <span class="current-flag">🇩🇪</span>
+              <span style="font-size: 0.8rem;">▼</span>
+            </button>
+            <div class="lang-dropdown-content">
+              <div class="lang-option" data-lang="de" data-flag="🇩🇪">🇩🇪</div>
+              <div class="lang-option" data-lang="fr" data-flag="🇫🇷">🇫🇷</div>
+              <div class="lang-option" data-lang="pt" data-flag="🇵🇹">🇵🇹</div>
+              <div class="lang-option" data-lang="es" data-flag="🇪🇸">🇪🇸</div>
+              <div class="lang-option" data-lang="it" data-flag="🇮🇹">🇮🇹</div>
+              <div class="lang-option" data-lang="pl" data-flag="🇵🇱">🇵🇱</div>
+              <div class="lang-option" data-lang="sv" data-flag="🇸🇪">🇸🇪</div>
+            </div>
           </div>
         </div>
       </nav>
@@ -141,29 +182,46 @@ class CustomNavbar extends HTMLElement {
       navLinks.classList.toggle("active");
     });
 
-    // Language switcher
-    const langBtns = this.shadowRoot.querySelectorAll(".lang-btn");
-    const updateLangButtons = () => {
+    // Language dropdown
+    const langDropdownBtn = this.shadowRoot.querySelector(".lang-dropdown-btn");
+    const langDropdownContent = this.shadowRoot.querySelector(".lang-dropdown-content");
+    const currentFlag = this.shadowRoot.querySelector(".current-flag");
+    const langOptions = this.shadowRoot.querySelectorAll(".lang-option");
+
+    langDropdownBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      langDropdownContent.classList.toggle("show");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", () => {
+      langDropdownContent.classList.remove("show");
+    });
+
+    const updateLangDropdown = () => {
       const currentLang = localStorage.getItem('lang') || 'de';
-      langBtns.forEach(btn => {
-        if (btn.dataset.lang === currentLang) {
-          btn.classList.add('active');
+      langOptions.forEach(option => {
+        if (option.dataset.lang === currentLang) {
+          option.classList.add('active');
+          currentFlag.textContent = option.dataset.flag;
         } else {
-          btn.classList.remove('active');
+          option.classList.remove('active');
         }
       });
     };
 
-    langBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const lang = btn.dataset.lang;
+    langOptions.forEach(option => {
+      option.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const lang = option.dataset.lang;
         localStorage.setItem('lang', lang);
         window.setLanguage(lang);
-        updateLangButtons();
+        updateLangDropdown();
+        langDropdownContent.classList.remove("show");
       });
     });
 
-    updateLangButtons();
+    updateLangDropdown();
 
     // Listen for language changes
     document.addEventListener('languageChanged', () => {
@@ -171,7 +229,7 @@ class CustomNavbar extends HTMLElement {
         const key = element.getAttribute('data-i18n');
         element.textContent = window.t(key);
       });
-      updateLangButtons();
+      updateLangDropdown();
     });
 
     // Initial translation
