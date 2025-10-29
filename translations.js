@@ -1,5 +1,96 @@
 // Translations for the website
 const translations = {
+  en: {
+    // Navbar
+    navHome: 'Home',
+    navAbout: 'About',
+    navMusic: 'Music',
+    navTour: 'Tour',
+    navMerch: 'Merch',
+    
+    // Hero
+    heroSlogan: '"Purple Reign in Satan\'s Name"',
+    heroCta: 'WITNESS THE HORROR',
+    
+    // About Section
+    aboutTitle: 'ABOUT OUR PURPLE INFERNO',
+    aboutP1: 'Formed in the darkest depths of your mother\'s basement, Schönerr Schwanz brings you the most intense black metal experience since the last time you disappointed your parents.',
+    aboutP2: 'Our sound is like a purple dildo for the ears - hard, unexpected, and makes you question your life choices.',
+    aboutP3: 'With lyrics about existential dread, bad decisions, and the occasional ode to phallic symbolism, we\'re here to make your ears bleed and your soul question its existence.',
+    aboutQuote: '"IT\'S NOT A PHASE, MOM"',
+    
+    // Music Section
+    musicTitle: 'OUR AUDIO ABOMINATIONS',
+    album1Title: '"Purple Veins of the Damned"',
+    album1Year: '2023 | Full-length',
+    album1Cta: 'HEAR YOUR DEMONS',
+    album2Title: '"Satan\'s Purple Sausage"',
+    album2Year: '2021 | EP',
+    album2Cta: 'BURN WITH US',
+    album3Title: '"Nocturnal Erections"',
+    album3Year: '2019 | Demo',
+    album3Cta: 'SUFFER OUR NOISE',
+    
+    // Tour Section
+    tourTitle: 'TOUR DATES (OR WHATEVER)',
+    tour1Venue: 'Artemis',
+    tour1Location: 'Berlin, Germany',
+    tour1Date: '15.03.2025',
+    tour1Time: 'Doors: 7:00 PM',
+    tour1Cta: 'BUY TICKETS',
+    tour2Venue: 'Dolls House',
+    tour2Location: 'Hamburg, Germany',
+    tour2Date: '22.04.2025',
+    tour2Time: 'Doors: 8:00 PM',
+    tour2Cta: 'BUY TICKETS',
+    tour3Venue: 'Pascha',
+    tour3Location: 'Cologne, Germany',
+    tour3Date: '10.06.2025',
+    tour3Time: 'Doors: 7:30 PM',
+    tour3Cta: 'BUY TICKETS',
+    tour4Venue: 'Paradise',
+    tour4Location: 'Stuttgart, Germany',
+    tour4Date: '18.09.2025',
+    tour4Time: 'Doors: 8:00 PM',
+    tour4Cta: 'BUY TICKETS',
+    tour5Venue: 'Red Light Villa',
+    tour5Location: 'Frankfurt, Germany',
+    tour5Date: '31.10.2025',
+    tour5Time: 'Doors: 7:00 PM',
+    tour5Cta: 'BUY TICKETS',
+    tour6Venue: 'Eros Center',
+    tour6Location: 'Munich, Germany',
+    tour6Date: '14.02.2026',
+    tour6Time: 'Doors: 8:00 PM',
+    tour6Cta: 'BUY TICKETS',
+    tour7Venue: 'Oase',
+    tour7Location: 'Hamburg, Germany',
+    tour7Date: '05.05.2026',
+    tour7Time: 'Doors: 7:30 PM',
+    tour7Cta: 'BUY TICKETS',
+    
+    // Merch Section
+    merchTitle: 'WEAR OUR SHAME',
+    merch1Title: '"I Saw Schönerr Schwanz and All I Got Was This Lousy T-Shirt (And Emotional Trauma)"',
+    merch1Price: '€29.99 (plus your dignity)',
+    merch1Cta: 'BUY NOW (WHY?)',
+    merch2Title: '"Purple Reign" Hoodie',
+    merch2Price: '€59.99 (your parents will disown you)',
+    merch2Cta: 'REGRET LATER',
+    merch3Title: 'Limited Edition Purple Dildo (Signed)',
+    merch3Price: '€666.66 (it\'s art, mom)',
+    merch3Cta: 'COLLECTIBLE AF',
+    
+    // Footer
+    footerAboutTitle: 'About Us',
+    footerAbout: 'We\'re Schönerr Schwanz. We play black metal poorly and wear too much purple. Our parents are disappointed.',
+    footerLinksTitle: 'Quick Links',
+    footerHome: 'Home',
+    footerTour: 'Tour Dates',
+    footerMerch: 'Merch Store',
+    footerSocialTitle: 'Follow Our Descent',
+    footerCopyright: '© 2025 Schönerr Schwanz | All Rights Reserved (Not Really)'
+  },
   de: {
     // Navbar
     navHome: 'Startseite',
@@ -14,7 +105,7 @@ const translations = {
     
     // About Section
     aboutTitle: 'ÜBER UNSER LILA INFERNO',
-    aboutP1: 'Gegründet in den dunkelsten Tiefen des Kellers deiner Mutter, bringt dir Schöner Schwanz das intensivste Black-Metal-Erlebnis seit du das letzte Mal deine Eltern enttäuscht hast.',
+    aboutP1: 'Gegründet in den dunkelsten Tiefen des Kellers deiner Mutter, bringt dir Schönerr Schwanz das intensivste Black-Metal-Erlebnis seit du das letzte Mal deine Eltern enttäuscht hast.',
     aboutP2: 'Unser Sound ist wie ein lila Dildo für die Ohren - hart, unerwartet und lässt dich deine Lebensentscheidungen hinterfragen.',
     aboutP3: 'Mit Texten über existenzielle Angst, schlechte Entscheidungen und gelegentliche Oden an phallische Symbolik sind wir hier, um deine Ohren bluten zu lassen und deine Seele ihre Existenz hinterfragen zu lassen.',
     aboutQuote: '"ES IST KEINE PHASE, MAMA"',
@@ -71,7 +162,7 @@ const translations = {
     
     // Merch Section
     merchTitle: 'TRAGE UNSERE SCHANDE',
-    merch1Title: '"Ich habe Schöner Schwanz gesehen und alles was ich bekam war dieses beschissene T-Shirt (und emotionale Traumata)"',
+    merch1Title: '"Ich habe Schönerr Schwanz gesehen und alles was ich bekam war dieses beschissene T-Shirt (und emotionale Traumata)"',
     merch1Price: '29,99€ (plus deine Würde)',
     merch1Cta: 'JETZT KAUFEN (WARUM?)',
     merch2Title: '"Purple Reign" Hoodie',
@@ -83,13 +174,13 @@ const translations = {
     
     // Footer
     footerAboutTitle: 'Über uns',
-    footerAbout: 'Wir sind Schöner Schwanz. Wir spielen schlecht Black Metal und tragen zu viel Lila. Unsere Eltern sind enttäuscht.',
+    footerAbout: 'Wir sind Schönerr Schwanz. Wir spielen schlecht Black Metal und tragen zu viel Lila. Unsere Eltern sind enttäuscht.',
     footerLinksTitle: 'Schnellzugriff',
     footerHome: 'Startseite',
     footerTour: 'Tour-Daten',
     footerMerch: 'Merch-Shop',
     footerSocialTitle: 'Folge unserem Abstieg',
-    footerCopyright: '© 2025 Schöner Schwanz | Alle Rechte vorbehalten (Nicht wirklich)'
+    footerCopyright: '© 2025 Schönerr Schwanz | Alle Rechte vorbehalten (Nicht wirklich)'
   },
   fr: {
     // Navbar
@@ -105,7 +196,7 @@ const translations = {
     
     // About Section
     aboutTitle: 'À PROPOS DE NOTRE ENFER POURPRE',
-    aboutP1: 'Formé dans les profondeurs les plus sombres du sous-sol de ta mère, Schöner Schwanz vous apporte l\'expérience black metal la plus intense depuis la dernière fois que vous avez déçu vos parents.',
+    aboutP1: 'Formé dans les profondeurs les plus sombres du sous-sol de ta mère, Schönerr Schwanz vous apporte l\'expérience black metal la plus intense depuis la dernière fois que vous avez déçu vos parents.',
     aboutP2: 'Notre son est comme un gode violet pour les oreilles - dur, inattendu, et vous fait remettre en question vos choix de vie.',
     aboutP3: 'Avec des paroles sur l\'angoisse existentielle, les mauvaises décisions et l\'occasionnelle ode au symbolisme phallique, nous sommes là pour faire saigner vos oreilles et faire douter votre âme de son existence.',
     aboutQuote: '"CE N\'EST PAS UNE PHASE, MAMAN"',
@@ -162,7 +253,7 @@ const translations = {
     
     // Merch Section
     merchTitle: 'PORTE NOTRE HONTE',
-    merch1Title: '"J\'ai vu Schöner Schwanz et tout ce que j\'ai eu c\'est ce t-shirt pourri (et un traumatisme émotionnel)"',
+    merch1Title: '"J\'ai vu Schönerr Schwanz et tout ce que j\'ai eu c\'est ce t-shirt pourri (et un traumatisme émotionnel)"',
     merch1Price: '29,99€ (plus ta dignité)',
     merch1Cta: 'ACHETER MAINTENANT (POURQUOI?)',
     merch2Title: 'Sweat à capuche "Purple Reign"',
@@ -174,13 +265,13 @@ const translations = {
     
     // Footer
     footerAboutTitle: 'À propos de nous',
-    footerAbout: 'Nous sommes Schöner Schwanz. Nous jouons mal du black metal et portons trop de violet. Nos parents sont déçus.',
+    footerAbout: 'Nous sommes Schönerr Schwanz. Nous jouons mal du black metal et portons trop de violet. Nos parents sont déçus.',
     footerLinksTitle: 'Liens rapides',
     footerHome: 'Accueil',
     footerTour: 'Dates de tournée',
     footerMerch: 'Boutique Merch',
     footerSocialTitle: 'Suivez notre descente',
-    footerCopyright: '© 2025 Schöner Schwanz | Tous droits réservés (Pas vraiment)'
+    footerCopyright: '© 2025 Schönerr Schwanz | Tous droits réservés (Pas vraiment)'
   },
   pt: {
     // Navbar
@@ -196,7 +287,7 @@ const translations = {
     
     // About Section
     aboutTitle: 'SOBRE NOSSO INFERNO ROXO',
-    aboutP1: 'Formado nas profundezas mais escuras do porão da tua mãe, Schöner Schwanz traz-te a experiência de black metal mais intensa desde a última vez que decepcionaste os teus pais.',
+    aboutP1: 'Formado nas profundezas mais escuras do porão da tua mãe, Schönerr Schwanz traz-te a experiência de black metal mais intensa desde a última vez que decepcionaste os teus pais.',
     aboutP2: 'O nosso som é como um dildo roxo para os ouvidos - duro, inesperado, e faz-te questionar as tuas escolhas de vida (tipo comer 12 pastéis de nata numa sentada).',
     aboutP3: 'Com letras sobre angústia existencial, más decisões e a ocasional ode ao simbolismo fálico, estamos aqui para fazer sangrar os teus ouvidos e fazer a tua alma questionar a sua existência.',
     aboutQuote: '"NÃO É UMA FASE, MÃE"',
@@ -253,7 +344,7 @@ const translations = {
     
     // Merch Section
     merchTitle: 'USA A NOSSA VERGONHA',
-    merch1Title: '"Vi Schöner Schwanz e tudo o que consegui foi esta t-shirt de merda (e trauma emocional)"',
+    merch1Title: '"Vi Schönerr Schwanz e tudo o que consegui foi esta t-shirt de merda (e trauma emocional)"',
     merch1Price: '29,99€ (mais a tua dignidade)',
     merch1Cta: 'COMPRAR AGORA (PORQUÊ?)',
     merch2Title: 'Hoodie "Purple Reign"',
@@ -265,13 +356,13 @@ const translations = {
     
     // Footer
     footerAboutTitle: 'Sobre nós',
-    footerAbout: 'Somos Schöner Schwanz. Tocamos black metal mal e usamos demasiado roxo. Os nossos pais estão desapontados.',
+    footerAbout: 'Somos Schönerr Schwanz. Tocamos black metal mal e usamos demasiado roxo. Os nossos pais estão desapontados.',
     footerLinksTitle: 'Links rápidos',
     footerHome: 'Início',
     footerTour: 'Datas da Tour',
     footerMerch: 'Loja Merch',
     footerSocialTitle: 'Segue a nossa descida',
-    footerCopyright: '© 2025 Schöner Schwanz | Todos os direitos reservados (Nem por isso)'
+    footerCopyright: '© 2025 Schönerr Schwanz | Todos os direitos reservados (Nem por isso)'
   },
   es: {
     // Navbar
@@ -287,7 +378,7 @@ const translations = {
     
     // About Section
     aboutTitle: 'SOBRE NUESTRO INFIERNO PÚRPURA',
-    aboutP1: 'Formado en las profundidades más oscuras del sótano de tu madre, Schöner Schwanz te trae la experiencia de black metal más intensa desde la última vez que decepcionaste a tus padres.',
+    aboutP1: 'Formado en las profundidades más oscuras del sótano de tu madre, Schönerr Schwanz te trae la experiencia de black metal más intensa desde la última vez que decepcionaste a tus padres.',
     aboutP2: 'Nuestro sonido es como un consolador morado para los oídos - duro, inesperado, y te hace cuestionar tus decisiones de vida.',
     aboutP3: 'Con letras sobre angustia existencial, malas decisiones y la ocasional oda al simbolismo fálico, estamos aquí para hacer sangrar tus oídos y hacer que tu alma cuestione su existencia.',
     aboutQuote: '"NO ES UNA FASE, MAMÁ"',
@@ -344,7 +435,7 @@ const translations = {
     
     // Merch Section
     merchTitle: 'VISTE NUESTRA VERGÜENZA',
-    merch1Title: '"Vi Schöner Schwanz y todo lo que conseguí fue esta camiseta de mierda (y trauma emocional)"',
+    merch1Title: '"Vi Schönerr Schwanz y todo lo que conseguí fue esta camiseta de mierda (y trauma emocional)"',
     merch1Price: '29,99€ (más tu dignidad)',
     merch1Cta: 'COMPRAR AHORA (¿POR QUÉ?)',
     merch2Title: 'Sudadera "Purple Reign"',
@@ -356,13 +447,13 @@ const translations = {
     
     // Footer
     footerAboutTitle: 'Sobre nosotros',
-    footerAbout: 'Somos Schöner Schwanz. Tocamos black metal mal y usamos demasiado morado. Nuestros padres están decepcionados.',
+    footerAbout: 'Somos Schönerr Schwanz. Tocamos black metal mal y usamos demasiado morado. Nuestros padres están decepcionados.',
     footerLinksTitle: 'Enlaces rápidos',
     footerHome: 'Inicio',
     footerTour: 'Fechas de gira',
     footerMerch: 'Tienda Merch',
     footerSocialTitle: 'Sigue nuestro descenso',
-    footerCopyright: '© 2025 Schöner Schwanz | Todos los derechos reservados (En realidad no)'
+    footerCopyright: '© 2025 Schönerr Schwanz | Todos los derechos reservados (En realidad no)'
   },
   it: {
     // Navbar
@@ -378,7 +469,7 @@ const translations = {
     
     // About Section
     aboutTitle: 'SUL NOSTRO INFERNO VIOLA',
-    aboutP1: 'Formato nelle profondità più oscure del seminterrato di tua madre, Schöner Schwanz ti porta l\'esperienza black metal più intensa dall\'ultima volta che hai deluso i tuoi genitori.',
+    aboutP1: 'Formato nelle profondità più oscure del seminterrato di tua madre, Schönerr Schwanz ti porta l\'esperienza black metal più intensa dall\'ultima volta che hai deluso i tuoi genitori.',
     aboutP2: 'Il nostro suono è come un dildo viola per le orecchie - duro, inaspettato, e ti fa mettere in discussione le tue scelte di vita.',
     aboutP3: 'Con testi sull\'angoscia esistenziale, cattive decisioni e l\'occasionale ode al simbolismo fallico, siamo qui per far sanguinare le tue orecchie e far dubitare la tua anima della sua esistenza.',
     aboutQuote: '"NON È UNA FASE, MAMMA"',
@@ -435,7 +526,7 @@ const translations = {
     
     // Merch Section
     merchTitle: 'INDOSSA LA NOSTRA VERGOGNA',
-    merch1Title: '"Ho visto Schöner Schwanz e tutto quello che ho ottenuto è questa maglietta di merda (e trauma emotivo)"',
+    merch1Title: '"Ho visto Schönerr Schwanz e tutto quello che ho ottenuto è questa maglietta di merda (e trauma emotivo)"',
     merch1Price: '29,99€ (più la tua dignità)',
     merch1Cta: 'COMPRA ORA (PERCHÉ?)',
     merch2Title: 'Felpa "Purple Reign"',
@@ -447,13 +538,13 @@ const translations = {
     
     // Footer
     footerAboutTitle: 'Chi siamo',
-    footerAbout: 'Siamo Schöner Schwanz. Suoniamo male il black metal e indossiamo troppo viola. I nostri genitori sono delusi.',
+    footerAbout: 'Siamo Schönerr Schwanz. Suoniamo male il black metal e indossiamo troppo viola. I nostri genitori sono delusi.',
     footerLinksTitle: 'Link rapidi',
     footerHome: 'Home',
     footerTour: 'Date del tour',
     footerMerch: 'Negozio Merch',
     footerSocialTitle: 'Segui la nostra discesa',
-    footerCopyright: '© 2025 Schöner Schwanz | Tutti i diritti riservati (Non proprio)'
+    footerCopyright: '© 2025 Schönerr Schwanz | Tutti i diritti riservati (Non proprio)'
   },
   pl: {
     // Navbar
@@ -469,7 +560,7 @@ const translations = {
     
     // About Section
     aboutTitle: 'O NASZYM FIOLETOWYM PIEKLE',
-    aboutP1: 'Założony w najciemniejszych głębinach piwnicy twojej matki, Schöner Schwanz przynosi ci najbardziej intensywne doświadczenie black metalu od czasu, kiedy ostatnio zawiodłeś swoich rodziców.',
+    aboutP1: 'Założony w najciemniejszych głębinach piwnicy twojej matki, Schönerr Schwanz przynosi ci najbardziej intensywne doświadczenie black metalu od czasu, kiedy ostatnio zawiodłeś swoich rodziców.',
     aboutP2: 'Nasz dźwięk jest jak fioletowe dildo dla uszu - twardy, nieoczekiwany i sprawia, że kwestionujesz swoje życiowe wybory.',
     aboutP3: 'Z tekstami o egzystencjalnym lęku, złych decyzjach i okazjonalnych odach do symboliki fallicznej, jesteśmy tu, aby sprawić, by twoje uszy krwawiły, a twoja dusza kwestionowała swoją egzystencję.',
     aboutQuote: '"TO NIE JEST FAZA, MAMO"',
@@ -526,7 +617,7 @@ const translations = {
     
     // Merch Section
     merchTitle: 'NOŚ NASZ WSTYD',
-    merch1Title: '"Widziałem Schöner Schwanz i wszystko co dostałem to ta gówniana koszulka (i trauma emocjonalna)"',
+    merch1Title: '"Widziałem Schönerr Schwanz i wszystko co dostałem to ta gówniana koszulka (i trauma emocjonalna)"',
     merch1Price: '29,99€ (plus twoja godność)',
     merch1Cta: 'KUP TERAZ (PO CO?)',
     merch2Title: 'Bluza "Purple Reign"',
@@ -538,13 +629,13 @@ const translations = {
     
     // Footer
     footerAboutTitle: 'O nas',
-    footerAbout: 'Jesteśmy Schöner Schwanz. Gramy kiepsko black metal i nosimy za dużo fioletu. Nasi rodzice są zawiedzeni.',
+    footerAbout: 'Jesteśmy Schönerr Schwanz. Gramy kiepsko black metal i nosimy za dużo fioletu. Nasi rodzice są zawiedzeni.',
     footerLinksTitle: 'Szybkie linki',
     footerHome: 'Strona główna',
     footerTour: 'Daty trasy',
     footerMerch: 'Sklep z gadżetami',
     footerSocialTitle: 'Śledź nasz upadek',
-    footerCopyright: '© 2025 Schöner Schwanz | Wszelkie prawa zastrzeżone (Nie do końca)'
+    footerCopyright: '© 2025 Schönerr Schwanz | Wszelkie prawa zastrzeżone (Nie do końca)'
   },
   sv: {
     // Navbar
@@ -560,7 +651,7 @@ const translations = {
     
     // About Section
     aboutTitle: 'OM VÅRT LILA INFERNO',
-    aboutP1: 'Grundat i de mörkaste djupen av din mammas källare, ger Schöner Schwanz dig den mest intensiva black metal-upplevelsen sedan du senast besvek dina föräldrar.',
+    aboutP1: 'Grundat i de mörkaste djupen av din mammas källare, ger Schönerr Schwanz dig den mest intensiva black metal-upplevelsen sedan du senast besvek dina föräldrar.',
     aboutP2: 'Vårt sound är som en lila dildo för öronen - hård, oväntad, och får dig att ifrågasätta dina livsval.',
     aboutP3: 'Med texter om existentiell ångest, dåliga beslut och den enstaka oden till fallisk symbolik, är vi här för att få dina öron att blöda och få din själ att ifrågasätta sin existens.',
     aboutQuote: '"DET ÄR INTE EN FAS, MAMMA"',
@@ -617,7 +708,7 @@ const translations = {
     
     // Merch Section
     merchTitle: 'BÄR VÅR SKAM',
-    merch1Title: '"Jag såg Schöner Schwanz och allt jag fick var denna skitiga t-shirt (och emotionellt trauma)"',
+    merch1Title: '"Jag såg Schönerr Schwanz och allt jag fick var denna skitiga t-shirt (och emotionellt trauma)"',
     merch1Price: '29,99€ (plus din värdighet)',
     merch1Cta: 'KÖP NU (VARFÖR?)',
     merch2Title: '"Purple Reign" Hoodie',
@@ -629,13 +720,13 @@ const translations = {
     
     // Footer
     footerAboutTitle: 'Om oss',
-    footerAbout: 'Vi är Schöner Schwanz. Vi spelar black metal dåligt och bär för mycket lila. Våra föräldrar är besvikna.',
+    footerAbout: 'Vi är Schönerr Schwanz. Vi spelar black metal dåligt och bär för mycket lila. Våra föräldrar är besvikna.',
     footerLinksTitle: 'Snabblänkar',
     footerHome: 'Hem',
     footerTour: 'Turnédatum',
     footerMerch: 'Merch-butik',
     footerSocialTitle: 'Följ vår nedgång',
-    footerCopyright: '© 2025 Schöner Schwanz | Alla rättigheter reserverade (Inte egentligen)'
+    footerCopyright: '© 2025 Schönerr Schwanz | Alla rättigheter reserverade (Inte egentligen)'
   }
 };
 

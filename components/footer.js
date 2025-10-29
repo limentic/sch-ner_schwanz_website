@@ -60,7 +60,7 @@ class CustomFooter extends HTMLElement {
       <div class="footer-content">
         <div class="footer-section">
           <h3 data-i18n="footerAboutTitle">About Us</h3>
-          <p data-i18n="footerAbout">We're Schöner Schwanz. We play black metal poorly and wear too much purple. Our parents are disappointed.</p>
+          <p data-i18n="footerAbout">We're Schönerr Schwanz. We play black metal poorly and wear too much purple. Our parents are disappointed.</p>
         </div>
         <div class="footer-section">
           <h3 data-i18n="footerLinksTitle">Quick Links</h3>
@@ -79,7 +79,7 @@ class CustomFooter extends HTMLElement {
         </div>
       </div>
       <div class="copyright" data-i18n="footerCopyright">
-        &copy; 2025 Schöner Schwanz | All Rights Reserved (Not Really)
+        &copy; 2025 Schönerr Schwanz | All Rights Reserved (Not Really)
       </div>
     `;
 

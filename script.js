@@ -1,4 +1,4 @@
-// Main JavaScript file for Schöner Schwanz website
+// Main JavaScript file for Schönerr Schwanz website
 // Initialize any custom interactions here
 
 // Force scroll to top on page load
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ensure we're at the top after everything loads
     window.scrollTo(0, 0);
     
-    console.log('Schöner Schwanz website loaded 🤘');
+    console.log('Schönerr Schwanz website loaded 🤘');
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

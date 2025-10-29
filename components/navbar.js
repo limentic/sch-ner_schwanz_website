@@ -162,6 +162,7 @@ class CustomNavbar extends HTMLElement {
               <span style="font-size: 0.8rem;">▼</span>
             </button>
             <div class="lang-dropdown-content">
+              <div class="lang-option" data-lang="en" data-flag="🇬🇧">🇬🇧</div>
               <div class="lang-option" data-lang="de" data-flag="🇩🇪">🇩🇪</div>
               <div class="lang-option" data-lang="fr" data-flag="🇫🇷">🇫🇷</div>
               <div class="lang-option" data-lang="pt" data-flag="🇵🇹">🇵🇹</div>
