@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Cinzel+Decorative:wght@400;700;900&family=IM+Fell+English+SC&display=swap');
+
+body {
+    font-family: 'IM Fell English SC', serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8d34c8;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7a2db3;
+}
+
+/* Pulsing effect for CTAs */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(141, 52, 200, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(141, 52, 200, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(141, 52, 200, 0);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Flickering text for metal effect */
+@keyframes flicker {
+    0% { opacity: 0.7; }
+    5% { opacity: 0.8; }
+    10% { opacity: 0.6; }
+    15% { opacity: 0.9; }
+    25% { opacity: 0.5; }
+    30% { opacity: 1; }
+    35% { opacity: 0.4; }
+    40% { opacity: 0.9; }
+    45% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+.flicker {
+    animation: flicker 3s infinite alternate;
+}
+
+/* Blood splatter effect */
+.blood-splatter {
+    position: relative;
+}
+
+.blood-splatter::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="none" stroke="%238d34c8" stroke-width="0.5" d="M20,20 Q30,10 40,20 T60,20 T80,10 T95,20" opacity="0.3"/><circle cx="30" cy="40" r="2" fill="%238d34c8" opacity="0.5"/><circle cx="70" cy="30" r="1.5" fill="%238d34c8" opacity="0.5"/><circle cx="50" cy="70" r="3" fill="%238d34c8" opacity="0.5"/></svg>') repeat;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    opacity: 0.2;
+}
