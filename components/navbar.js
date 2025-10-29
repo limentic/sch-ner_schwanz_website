@@ -98,10 +98,10 @@ class CustomNavbar extends HTMLElement {
         </button>
         <div class="nav-links">
           <a href="#" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#music" class="nav-link">Music</a>
           <a href="#tour" class="nav-link">Tour</a>
-          <a href="#" class="nav-link">Music</a>
-          <a href="#" class="nav-link">Merch</a>
-          <a href="#" class="nav-link">Contact</a>
+          <a href="#merch" class="nav-link">Merch</a>
         </div>
       </nav>
     `;

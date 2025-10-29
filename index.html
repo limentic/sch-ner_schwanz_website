@@ -23,19 +23,31 @@
             }
         }
     </script>
+    <script>
+        // Force scroll to top immediately
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.addEventListener('beforeunload', function () {
+            window.scrollTo(0, 0);
+        });
+        window.addEventListener('load', function () {
+            setTimeout(function() {
+                window.scrollTo(0, 0);
+            }, 0);
+        });
+    </script>
 </head>
 <body class="bg-black text-white font-mono">
     <custom-navbar></custom-navbar>
     <main class="min-h-screen">
         <!-- Hero Section -->
         <section class="relative h-screen overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90 z-10"></div>
-            <img src="http://static.photos/monochrome/1200x630/666" alt="Schöner Schwanz" class="w-full h-full object-cover">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGwzdjNmcmRkdDJ4Ynhja25wZGVlZ2V6cG8yeGsxbDFoYWtzNzF3MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/r6jrEccATOZ6U/giphy.gif" alt="Band Performance" class="absolute inset-0 w-full h-full object-cover grayscale opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black z-10"></div>
             <div class="absolute inset-0 flex flex-col justify-center items-center z-20 px-4 text-center">
-                <h1 class="text-6xl md:text-8xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-schwanz-500 to-schwanz-700">
-                    SCHÖNER SCHWANZ
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 italic font-serif">"Purple Reign in Satan's Name"</p>
+                <img src="assets/logo.svg" alt="Schöner Schwanz Logo" class="w-80 md:w-[500px] lg:w-[650px] mb-0">
+                <p class="text-xl md:text-2xl mb-10 italic font-serif">"Purple Reign in Satan's Name"</p>
                 <a href="#tour" class="px-8 py-3 bg-schwanz-600 hover:bg-schwanz-700 rounded-full font-bold transition-all duration-300 transform hover:scale-105">
                     WITNESS THE HORROR
                 </a>
@@ -43,7 +55,7 @@
         </section>
 
         <!-- About Section -->
-        <section class="py-20 px-4 max-w-6xl mx-auto">
+        <section id="about" class="py-20 px-4 max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold mb-12 text-center text-schwanz-500">ABOUT OUR PURPLE INFERNO</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -61,7 +73,7 @@
         </section>
 
         <!-- Music Section -->
-        <section class="py-20 bg-gradient-to-b from-black to-gray-900 px-4">
+        <section id="music" class="py-20 bg-gradient-to-b from-black to-gray-900 px-4">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-4xl font-bold mb-12 text-center text-schwanz-500">OUR AUDIO ABOMINATIONS</h2>
                 <div class="grid md:grid-cols-3 gap-8">
@@ -152,7 +164,7 @@
         </section>
 
         <!-- Merch -->
-        <section class="py-20 bg-gradient-to-b from-gray-900 to-black px-4">
+        <section id="merch" class="py-20 bg-gradient-to-b from-gray-900 to-black px-4">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-4xl font-bold mb-12 text-center text-schwanz-500">WEAR OUR SHAME</h2>
                 <div class="grid md:grid-cols-3 gap-8">
