@@ -68,6 +68,30 @@ class CustomNavbar extends HTMLElement {
           font-size: 1.5rem;
           cursor: pointer;
         }
+        .lang-switcher {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+        }
+        .lang-btn {
+          background: none;
+          border: 1px solid #8d34c8;
+          color: white;
+          padding: 0.3rem 0.8rem;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 0.85rem;
+          font-weight: bold;
+          transition: all 0.3s ease;
+        }
+        .lang-btn:hover {
+          background: #8d34c8;
+          color: black;
+        }
+        .lang-btn.active {
+          background: #8d34c8;
+          color: black;
+        }
         @media (max-width: 768px) {
           .nav-links {
             display: none;
@@ -97,11 +121,15 @@ class CustomNavbar extends HTMLElement {
           <i data-feather="menu"></i>
         </button>
         <div class="nav-links">
-          <a href="#" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#music" class="nav-link">Music</a>
-          <a href="#tour" class="nav-link">Tour</a>
-          <a href="#merch" class="nav-link">Merch</a>
+          <a href="#" class="nav-link" data-i18n="navHome">Home</a>
+          <a href="#about" class="nav-link" data-i18n="navAbout">About</a>
+          <a href="#music" class="nav-link" data-i18n="navMusic">Music</a>
+          <a href="#tour" class="nav-link" data-i18n="navTour">Tour</a>
+          <a href="#merch" class="nav-link" data-i18n="navMerch">Merch</a>
+          <div class="lang-switcher">
+            <button class="lang-btn" data-lang="de">DE</button>
+            <button class="lang-btn" data-lang="fr">FR</button>
+          </div>
         </div>
       </nav>
     `;
@@ -111,6 +139,45 @@ class CustomNavbar extends HTMLElement {
 
     menuBtn.addEventListener("click", () => {
       navLinks.classList.toggle("active");
+    });
+
+    // Language switcher
+    const langBtns = this.shadowRoot.querySelectorAll(".lang-btn");
+    const updateLangButtons = () => {
+      const currentLang = localStorage.getItem('lang') || 'de';
+      langBtns.forEach(btn => {
+        if (btn.dataset.lang === currentLang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    };
+
+    langBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const lang = btn.dataset.lang;
+        localStorage.setItem('lang', lang);
+        window.setLanguage(lang);
+        updateLangButtons();
+      });
+    });
+
+    updateLangButtons();
+
+    // Listen for language changes
+    document.addEventListener('languageChanged', () => {
+      this.shadowRoot.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        element.textContent = window.t(key);
+      });
+      updateLangButtons();
+    });
+
+    // Initial translation
+    this.shadowRoot.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      element.textContent = window.t(key);
     });
   }
 }

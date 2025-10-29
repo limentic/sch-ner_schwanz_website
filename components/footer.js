@@ -59,17 +59,17 @@ class CustomFooter extends HTMLElement {
       </style>
       <div class="footer-content">
         <div class="footer-section">
-          <h3>About Us</h3>
-          <p>We're Schöner Schwanz. We play black metal poorly and wear too much purple. Our parents are disappointed.</p>
+          <h3 data-i18n="footerAboutTitle">About Us</h3>
+          <p data-i18n="footerAbout">We're Schöner Schwanz. We play black metal poorly and wear too much purple. Our parents are disappointed.</p>
         </div>
         <div class="footer-section">
-          <h3>Quick Links</h3>
-          <p><a href="#" style="color: #8d34c8; text-decoration: none;">Home</a></p>
-          <p><a href="#tour" style="color: #8d34c8; text-decoration: none;">Tour Dates</a></p>
-          <p><a href="#" style="color: #8d34c8; text-decoration: none;">Merch Store</a></p>
+          <h3 data-i18n="footerLinksTitle">Quick Links</h3>
+          <p><a href="#" style="color: #8d34c8; text-decoration: none;" data-i18n="footerHome">Home</a></p>
+          <p><a href="#tour" style="color: #8d34c8; text-decoration: none;" data-i18n="footerTour">Tour Dates</a></p>
+          <p><a href="#" style="color: #8d34c8; text-decoration: none;" data-i18n="footerMerch">Merch Store</a></p>
         </div>
         <div class="footer-section">
-          <h3>Follow Our Descent</h3>
+          <h3 data-i18n="footerSocialTitle">Follow Our Descent</h3>
           <div class="social-links">
             <a href="#" class="social-link"><i data-feather="facebook"></i></a>
             <a href="#" class="social-link"><i data-feather="instagram"></i></a>
@@ -78,10 +78,24 @@ class CustomFooter extends HTMLElement {
           </div>
         </div>
       </div>
-      <div class="copyright">
+      <div class="copyright" data-i18n="footerCopyright">
         &copy; 2024 Schöner Schwanz | All Rights Reserved (Not Really)
       </div>
     `;
+
+    // Listen for language changes
+    document.addEventListener('languageChanged', () => {
+      this.shadowRoot.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        element.textContent = window.t(key);
+      });
+    });
+
+    // Initial translation
+    this.shadowRoot.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      element.textContent = window.t(key);
+    });
   }
 }
 
